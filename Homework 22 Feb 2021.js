@@ -1,8 +1,6 @@
 // Watch and Code Homework 22nd Feb 2021
 // Assignment: https://gist.github.com/gordonmzhu/446d1dc92fca278ffa89df4d8215bd89
 
-// My solutions:
-
 // Sequence: 1, 4, 7, 10, 13, 16 ...
 // 1st element: 1
 // ith element: previous element + 3
@@ -29,6 +27,7 @@ function getIthElement(i) { // i = 1 // i = 2 // i = 3
 
 // Count the lines of code that will run for a given input (minus the lines with debugger and console.log)
 // The final counter logged by the function is the number of lines of code that run.
+// My solution
 
 var counter = 0;
 
@@ -74,20 +73,19 @@ function getIthElement(i) {
 function getIthElementIterative(i) {
   // debugger;
   var result = 1; // 1 ist unser Startpunkt, zu dem wir 3 dazuzählen müssen, um zum nächsten Element der Folge zu gelangen.
-  var counter = 1; // weil die erste und letzte Zeile sowieso laufen.
+  var counter = 1; // as the first line runs anyway
 
   for (var j = 1; j < i; j++) { // j = Anzahl der Durchgänge durch die Loop?/Anzahl der Elemente, die zur Folge hinzgefüht werden? Läuft, solange j kleiner als i ist.
     result += 3; // In jedem Durchgang wird 3 zum vorigen Ergebnis dazugezählt.
     counter += 2; // 2 Zeilen pro Durchgang durch Loop, außer beim letzten
   }
 
-  counter += 2; // 1 x Überprüfen der Bedingung in der for-loop, 1 x Ausgeben des Resultats.
+  counter += 2; // 1 line: checking the condition in the for loop; 1 line: returning the result
   console.log('counter:', counter);
   return result; // Gibt das Ergebnis aus.
 }
 
 // For each approach, count the number of lines of code that will run for the following inputs:
-// ERGIBT SICH EIN MUSTER?
 
 // - i = 1.
   // Erwartung: 3 Zeilen. d.h. 1. Zeile, 1 Zeile Loop, letzte Zeile. 
